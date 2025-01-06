@@ -151,6 +151,45 @@ const App = () => {
           ))}
         </Layer>
       </Stage>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+        <button
+          style={{
+            padding: '10px 20px',
+            marginRight: '10px',
+            fontSize: '16px',
+            backgroundColor: '#3498db',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+          }}
+          onClick={() => {
+            if (platform.x > 0) {
+              setPlatform((prev) => ({ ...prev, x: prev.x - 30 }));
+            }
+          }}
+        >
+          Влево
+        </button>
+        <button
+          style={{
+            padding: '10px 20px',
+            fontSize: '16px',
+            backgroundColor: '#3498db',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+          }}
+          onClick={() => {
+            if (platform.x < 300) {
+              setPlatform((prev) => ({ ...prev, x: prev.x + 30 }));
+            }
+          }}
+        >
+          Вправо
+        </button>
+      </div>
       <button
         style={{
           display: 'block',
